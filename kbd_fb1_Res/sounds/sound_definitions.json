@@ -1,0 +1,18 @@
+{
+  "dy_load_list": [],
+  "format_version": "1.14.0",
+  "sound_definitions": {
+    "zdkj.chasedv2": {
+      "category": "music",
+      "sounds": [
+        {
+          "load_on_low_memory": true,
+          "name": "sounds/fog_man/chasedv2",
+          "pitch": 1.0,
+          "stream": true,
+          "volume": 2.0
+        }
+      ]
+    }
+  }
+}

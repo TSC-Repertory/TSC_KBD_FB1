@@ -1,0 +1,578 @@
+{
+    "format_version": "1.10",
+    "render_controllers": {
+        "controller.render.default": {
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "geometry": "Geometry.default",
+            "textures": [
+                "Texture.default"
+            ]
+        },
+        "controller.render.preset.mould": {
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "geometry": "Geometry.default",
+            "textures": [
+                "Texture.default"
+            ],
+            "is_hurt_color": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            }
+        },
+        "controller.render.preset.glint": {
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "geometry": "Geometry.default",
+            "textures": [
+                "Texture.default"
+            ],
+            "light_color_multiplier": 3.0
+        },
+        "controller.render.preset.anim_skin": {
+            "geometry": "Geometry.default",
+            "textures": [
+                "Array.skins[math.mod(math.trunc(query.time_stamp / 2), 6)]"
+            ],
+            "arrays": {
+                "textures": {
+                    "Array.skins": [
+                        "Texture.type1",
+                        "Texture.type2",
+                        "Texture.type3",
+                        "Texture.type4",
+                        "Texture.type5",
+                        "Texture.type6"
+                    ]
+                }
+            },
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ]
+        },
+        "controller.render.preset.bloom": {
+            "geometry": "Geometry.default",
+            "textures": [
+                "Texture.default",
+                "Texture.bloom"
+            ],
+            "materials": [
+                {
+                    "*": "Material.bloom"
+                }
+            ]
+        },
+        "controller.render.preset.custom_player.first_person": {
+            "geometry": "Geometry.default",
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "textures": [
+                "Texture.default"
+            ],
+            "part_visibility": [
+                {
+                    "*": false
+                },
+                {
+                    "rightArm*": "query.get_equipped_item_name(0, 1) == '' || query.get_equipped_item_name(0, 1) == 'map'"
+                },
+                {
+                    "rightSleeve*": "query.get_equipped_item_name(0, 1) == '' || query.get_equipped_item_name(0, 1) == 'map'"
+                },
+                {
+                    "leftArm*": "(query.get_equipped_item_name(0, 1) == 'map' && query.get_equipped_item_name('off_hand') != 'shield') || (query.get_equipped_item_name('off_hand') == 'map' && !query.item_is_charged) || (!query.item_is_charged && (variable.item_use_normalized > 0 && variable.item_use_normalized < 1.0))"
+                },
+                {
+                    "leftSleeve*": "(query.get_equipped_item_name(0, 1) == 'map' && query.get_equipped_item_name('off_hand') != 'shield') || (query.get_equipped_item_name('off_hand') == 'map' && !query.item_is_charged) || (!query.item_is_charged && (variable.item_use_normalized > 0 && variable.item_use_normalized < 1.0))"
+                }
+            ]
+        },
+        "controller.render.preset.blink": {
+            "geometry": "Geometry.default",
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "textures": [
+                "Texture.default"
+            ],
+            "overlay_color": {
+                "r": "variable.flash == 0.0 ? this : 1.0",
+                "g": "variable.flash == 0.0 ? this : 1.0",
+                "b": "variable.flash == 0.0 ? this : 1.0",
+                "a": "variable.flash == 0.0 ? this : 1.0"
+            }
+        },
+        "controller.render.preset.black": {
+            "geometry": "Geometry.default",
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "textures": [
+                "Texture.default"
+            ],
+            "light_color_multiplier": 0.0
+        },
+        "controller.render.preset.type2": {
+            "geometry": "Geometry.default",
+            "textures": [
+                "Array.skins[query.skin_id]"
+            ],
+            "arrays": {
+                "textures": {
+                    "Array.skins": [
+                        "Texture.type1",
+                        "Texture.type2"
+                    ]
+                }
+            },
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ]
+        },
+        "controller.render.preset.type3": {
+            "geometry": "Geometry.default",
+            "textures": [
+                "Array.skins[query.skin_id]"
+            ],
+            "arrays": {
+                "textures": {
+                    "Array.skins": [
+                        "Texture.type1",
+                        "Texture.type2",
+                        "Texture.type3"
+                    ]
+                }
+            },
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ]
+        },
+        "controller.render.preset.type4": {
+            "geometry": "Geometry.default",
+            "textures": [
+                "Array.skins[query.skin_id]"
+            ],
+            "arrays": {
+                "textures": {
+                    "Array.skins": [
+                        "Texture.type1",
+                        "Texture.type2",
+                        "Texture.type3",
+                        "Texture.type4"
+                    ]
+                }
+            },
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ]
+        },
+        "controller.render.preset.type5": {
+            "geometry": "Geometry.default",
+            "textures": [
+                "Array.skins[query.skin_id]"
+            ],
+            "arrays": {
+                "textures": {
+                    "Array.skins": [
+                        "Texture.type1",
+                        "Texture.type2",
+                        "Texture.type3",
+                        "Texture.type4",
+                        "Texture.type5"
+                    ]
+                }
+            },
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ]
+        },
+        "controller.render.preset.type6": {
+            "geometry": "Geometry.default",
+            "textures": [
+                "Array.skins[query.skin_id]"
+            ],
+            "arrays": {
+                "textures": {
+                    "Array.skins": [
+                        "Texture.type1",
+                        "Texture.type2",
+                        "Texture.type3",
+                        "Texture.type4",
+                        "Texture.type5",
+                        "Texture.type6"
+                    ]
+                }
+            },
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ]
+        },
+        "controller.render.preset.type10": {
+            "geometry": "Geometry.default",
+            "textures": [
+                "Array.skins[query.skin_id-1]"
+            ],
+            "arrays": {
+                "textures": {
+                    "Array.skins": [
+                        "Texture.type1",
+                        "Texture.type2",
+                        "Texture.type3",
+                        "Texture.type4",
+                        "Texture.type5",
+                        "Texture.type6",
+                        "Texture.type7",
+                        "Texture.type8",
+                        "Texture.type9",
+                        "Texture.type10"
+                    ]
+                }
+            },
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ]
+        },
+        "controller.render.preset.class2_type1": {
+            "geometry": "Array.geos[query.skin_id]",
+            "textures": [
+                "Array.skins[query.skin_id]"
+            ],
+            "arrays": {
+                "geometries": {
+                    "Array.geos": [
+                        "Geometry.class1",
+                        "Geometry.class2"
+                    ]
+                },
+                "textures": {
+                    "Array.skins": [
+                        "Texture.class1_type1",
+                        "Texture.class2_type1"
+                    ]
+                }
+            },
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ]
+        },
+        "controller.render.preset.class2_type2": {
+            "geometry": "Array.geos[query.skin_id]",
+            "textures": [
+                "Array.skins[query.skin_id]"
+            ],
+            "arrays": {
+                "geometries": {
+                    "Array.geos": [
+                        "Geometry.class1",
+                        "Geometry.class1",
+                        "Geometry.class2",
+                        "Geometry.class2"
+                    ]
+                },
+                "textures": {
+                    "Array.skins": [
+                        "Texture.class1_type1",
+                        "Texture.class1_type2",
+                        "Texture.class2_type1",
+                        "Texture.class2_type2"
+                    ]
+                }
+            },
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ]
+        },
+        "controller.render.preset.class2_type3": {
+            "geometry": "Array.geos[query.skin_id]",
+            "textures": [
+                "Array.skins[query.skin_id]"
+            ],
+            "arrays": {
+                "geometries": {
+                    "Array.geos": [
+                        "Geometry.class1",
+                        "Geometry.class1",
+                        "Geometry.class1",
+                        "Geometry.class2",
+                        "Geometry.class2",
+                        "Geometry.class2"
+                    ]
+                },
+                "textures": {
+                    "Array.skins": [
+                        "Texture.class1_type1",
+                        "Texture.class1_type2",
+                        "Texture.class1_type3",
+                        "Texture.class2_type1",
+                        "Texture.class2_type2",
+                        "Texture.class2_type3"
+                    ]
+                }
+            },
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ]
+        },
+        "controller.render.preset.class2_type4": {
+            "geometry": "Array.geos[query.skin_id]",
+            "textures": [
+                "Array.skins[query.skin_id]"
+            ],
+            "arrays": {
+                "geometries": {
+                    "Array.geos": [
+                        "Geometry.class1",
+                        "Geometry.class1",
+                        "Geometry.class1",
+                        "Geometry.class1",
+                        "Geometry.class2",
+                        "Geometry.class2",
+                        "Geometry.class2",
+                        "Geometry.class2"
+                    ]
+                },
+                "textures": {
+                    "Array.skins": [
+                        "Texture.class1_type1",
+                        "Texture.class1_type2",
+                        "Texture.class1_type3",
+                        "Texture.class1_type4",
+                        "Texture.class2_type1",
+                        "Texture.class2_type2",
+                        "Texture.class2_type3",
+                        "Texture.class2_type4"
+                    ]
+                }
+            },
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ]
+        },
+        "controller.render.preset.class2_type5": {
+            "geometry": "Array.geos[query.skin_id]",
+            "textures": [
+                "Array.skins[query.skin_id]"
+            ],
+            "arrays": {
+                "geometries": {
+                    "Array.geos": [
+                        "Geometry.class1",
+                        "Geometry.class1",
+                        "Geometry.class1",
+                        "Geometry.class1",
+                        "Geometry.class1",
+                        "Geometry.class2",
+                        "Geometry.class2",
+                        "Geometry.class2",
+                        "Geometry.class2",
+                        "Geometry.class2"
+                    ]
+                },
+                "textures": {
+                    "Array.skins": [
+                        "Texture.class1_type1",
+                        "Texture.class1_type2",
+                        "Texture.class1_type3",
+                        "Texture.class1_type4",
+                        "Texture.class1_type5",
+                        "Texture.class2_type1",
+                        "Texture.class2_type2",
+                        "Texture.class2_type3",
+                        "Texture.class2_type4",
+                        "Texture.class2_type5"
+                    ]
+                }
+            },
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ]
+        },
+        "controller.render.preset.class2_type6": {
+            "geometry": "Array.geos[query.skin_id]",
+            "textures": [
+                "Array.skins[query.skin_id]"
+            ],
+            "arrays": {
+                "geometries": {
+                    "Array.geos": [
+                        "Geometry.class1",
+                        "Geometry.class1",
+                        "Geometry.class1",
+                        "Geometry.class1",
+                        "Geometry.class1",
+                        "Geometry.class1",
+                        "Geometry.class2",
+                        "Geometry.class2",
+                        "Geometry.class2",
+                        "Geometry.class2",
+                        "Geometry.class2",
+                        "Geometry.class2"
+                    ]
+                },
+                "textures": {
+                    "Array.skins": [
+                        "Texture.class1_type1",
+                        "Texture.class1_type2",
+                        "Texture.class1_type3",
+                        "Texture.class1_type4",
+                        "Texture.class1_type5",
+                        "Texture.class1_type6",
+                        "Texture.class2_type1",
+                        "Texture.class2_type2",
+                        "Texture.class2_type3",
+                        "Texture.class2_type4",
+                        "Texture.class2_type5",
+                        "Texture.class2_type6"
+                    ]
+                }
+            },
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ]
+        },
+
+        "controller.render.mob_sword": {
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+
+            "geometry": "Geometry.mob_sword",
+            "textures": [
+                "Texture.mob_sword"
+            ]
+        },
+        "controller.render.mob_armor": {
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "geometry": "Geometry.mob_armor",
+            "textures": [
+                "Texture.mob_armor"
+            ]
+        },
+
+        "controller.render.mob_over": {
+            "geometry": "Geometry.default",
+            "textures": [
+                "Array.skins[query.mark_variant]"
+            ],
+            "arrays": {
+                "textures": {
+                    "Array.skins": [
+                        "Texture.default",
+                        "Texture.over"
+                    ]
+                }
+            },
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ]
+        },
+
+        "controller.render.eye_other": {
+            "geometry": "Geometry.default",
+            "textures": [
+                "Array.skins[query.mark_variant]"
+            ],
+            "arrays": {
+                "textures": {
+                    "Array.skins": [
+                        "Texture.default",
+                        "Texture.over"
+                    ]
+                }
+            },
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "part_visibility": [
+                {
+                    "*": true
+                },
+                {
+                    "eye*": false
+                }
+            ]
+        },
+        "controller.render.eye_light": {
+            "geometry": "Geometry.default",
+            "textures": [
+                "Array.skins[query.mark_variant]"
+            ],
+            "arrays": {
+                "textures": {
+                    "Array.skins": [
+                        "Texture.default",
+                        "Texture.over"
+                    ]
+                }
+            },
+            "materials": [
+                {
+                    "*": "Material.light"
+                }
+            ],
+            "part_visibility": [
+                {
+                    "*": false
+                },
+                {
+                    "eye*": true
+                }
+            ]
+        }
+    }
+}

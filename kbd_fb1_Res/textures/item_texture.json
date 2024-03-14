@@ -1,0 +1,9 @@
+{
+    "resource_pack_name": "vanilla",
+    "texture_data": {
+      "tsc_kbd:fog_man_item": {
+        "textures": "textures/item/fog_man_item"
+      }
+    },
+    "texture_name": "atlas.items"
+}

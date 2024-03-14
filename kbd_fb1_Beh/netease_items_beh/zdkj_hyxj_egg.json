@@ -1,0 +1,16 @@
+{
+ "format_version": "1.16", 
+ "minecraft:item": {
+  "components": {
+   "netease:egg": {
+    "entity": "zdkj:hyxj"
+   }
+  }, 
+  "description": {
+   "category": "zdkj",
+   "custom_item_type": "egg", 
+   "identifier": "zdkj:hyxj_egg",
+   "register_to_create_menu": true
+  }
+ }
+}

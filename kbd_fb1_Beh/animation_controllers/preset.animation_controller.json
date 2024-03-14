@@ -1,0 +1,49 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.preset.entity.delayed_attack": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "trigger": "query.is_delayed_attacking"
+                        }
+                    ]
+                },
+                "trigger": {
+                    "on_entry": [
+                        "@s event:active_delayed_attack"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!query.is_delayed_attacking"
+                        }
+                    ]
+                }
+            }
+        },
+        "controller.animation.preset.entity.range_attack": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "trigger": "query.facing_target_to_range_attack"
+                        }
+                    ]
+                },
+                "trigger": {
+                    "on_entry": [
+                        "@s event:active_range_attack"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!query.facing_target_to_range_attack"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

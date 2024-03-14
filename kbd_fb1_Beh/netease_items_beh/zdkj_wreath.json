@@ -1,0 +1,22 @@
+{
+    "format_version":"1.10",
+    "minecraft:item":{
+        "description": {
+            "identifier": "zdkj:wreath",
+            "register_to_create_menu": true,
+            "custom_item_type":"armor",
+			"category":"zdkj"
+        },
+        "components": {
+            "minecraft:max_damage": 150,
+            "netease:armor":{
+                "defense": 5,
+                "enchantment": 2,
+                "armor_slot": 0
+            },
+            "netease:customtips": {
+                "value": "穿戴后缓慢恢复san值"
+            }
+        }
+    }
+}

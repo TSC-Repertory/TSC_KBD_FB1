@@ -1,0 +1,52 @@
+{
+    "format_version": "1.17.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "common:detector",
+            "is_spawnable": false,
+            "is_summonable": false,
+            "is_experimental": false
+        },
+        "component_groups": {
+            "comp:no_physics": {
+                "minecraft:physics": {
+                    "has_gravity": false,
+                    "has_collision": false
+                }
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "detector"
+                ]
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "all",
+                    "deals_damage": false
+                }
+            },
+            "minecraft:collision_box": {
+                "width": 0.1,
+                "height": 2.0
+            },
+            "minecraft:physics": {
+                "has_gravity": false
+            },
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": false
+            }
+        },
+        "events": {
+            "event:no_physics": {
+                "add": {
+                    "component_groups": [
+                        "comp:no_physics"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "format_version": "1.10",
+    "minecraft:item": {
+        "components": {
+            "minecraft:icon": "tsc_kbd:fog_man_item"
+        },
+        "description": {
+            "identifier": "tsc_kbd:fog_man_item"
+        }
+    }
+}

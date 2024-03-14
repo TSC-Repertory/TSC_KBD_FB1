@@ -1,0 +1,13 @@
+{
+    "format_version": "1.10",
+    "minecraft:item": {
+        "description": {
+            "identifier": "zdkj:fog_man_item",
+            "register_to_create_menu": true,
+            "category":"zdkj"
+        },
+        "components": {
+            "minecraft:max_stack_size": 1
+        }
+    }
+}
