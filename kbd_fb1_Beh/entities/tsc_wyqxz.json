@@ -107,14 +107,14 @@
         },
         "components": {
             "minecraft:health": {
-                "value": 500,
-                "max": 500
+                "value": 120,
+                "max": 120
             },
             "minecraft:variant": {
                 "value": 0
             },
             "minecraft:attack": {
-                "damage": 5
+                "damage": 7
             },
             "minecraft:scale": {
                 "value": 1.0

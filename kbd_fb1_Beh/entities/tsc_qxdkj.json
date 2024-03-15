@@ -2,7 +2,7 @@
     "format_version": "1.17.0",
     "minecraft:entity": {
         "description": {
-            "identifier": "tsc:qfdkj",
+            "identifier": "tsc:qxdkj",
             "is_spawnable": true,
             "is_summonable": true,
             "is_experimental": false
@@ -107,14 +107,14 @@
         },
         "components": {
             "minecraft:health": {
-                "value": 500,
-                "max": 500
+                "value": 700,
+                "max": 700
             },
             "minecraft:variant": {
                 "value": 0
             },
             "minecraft:attack": {
-                "damage": 5
+                "damage": 9
             },
             "minecraft:scale": {
                 "value": 1.0

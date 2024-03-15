@@ -30,5 +30,8 @@ class BaseModuleServer(ModuleServerBase):
         module = self.ModuleSystem.GetModule(module_id)  # type: preset_module.MobModuleServer
 
         # 生物注册
-        module.RegisterMobClass("zdkj:fog_man", FogManEntity)
+        module.RegisterMobClass("tsc:mlzzz", MLZZZEntity)
+        module.RegisterMobClass("tsc:qxdkj", QXDKJEntity)
+        module.RegisterMobClass("tsc:wyqxz", WYQXZEntity)
+        module.RegisterMobClass("tsc:jegzz", JZGZZEntity)
 

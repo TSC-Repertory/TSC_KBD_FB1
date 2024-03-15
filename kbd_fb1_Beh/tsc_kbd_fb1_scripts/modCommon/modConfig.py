@@ -73,7 +73,19 @@ class ModUI(object):
 
 
 Fog_Man_EntityAttrConfig = {
-    "zdkj:fog_man": {
+    "tsc:mlzzz": {
+        "attack_cd": 30,
+        "attr": "physical"
+    },
+    "tsc:qxdkj": {
+        "attack_cd": 30,
+        "attr": "physical"
+    },
+    "tsc:wyqxz": {
+        "attack_cd": 30,
+        "attr": "physical"
+    },
+    "tsc:jegzz": {
         "attack_cd": 30,
         "attr": "physical"
     }

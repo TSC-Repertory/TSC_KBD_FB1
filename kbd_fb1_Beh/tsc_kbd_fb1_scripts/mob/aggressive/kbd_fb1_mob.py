@@ -144,14 +144,11 @@ class ModEntityAlcatraz(ModEntityBase):
         self.game_comp.AddTimer(value, comp.SetPlayerMovable, True)
 
 
-class FogManEntity(ModEntityAlcatraz):
-    """雾中人"""
+class MLZZZEntity(ModEntityAlcatraz):
+    """糜烂追踪者"""
 
     def __init__(self, entityId):
-        super(FogManEntity, self).__init__(entityId)
-        self.live_time = 0
-        self.live_time2 = 0
-        self.see_time = 0
+        super(MLZZZEntity, self).__init__(entityId)
         if modConfig.BeforeTime:
             self.TriggerCustomEvent("event:before_time")
 
@@ -159,24 +156,50 @@ class FogManEntity(ModEntityAlcatraz):
         pass
 
     def SecondUpdate(self):
-        super(FogManEntity, self).SecondUpdate()
-        target = self.GetAttackTarget()
-        if target and not self.HasTag("can_attack"):
-            player_list = self.GetMobInRadius(15, filters=GameFilter.Player)
-            if target in player_list:
-                RawEntity.Create(GameEntity.lightning_bolt, dim=self.dim, pos=self.foot_pos)
-                self.TriggerCustomEvent("event:can_attack")
-                self.AddTag("can_attack")
-                if not modConfig.BeforeTime:
-                    self.game_comp.AddTimer(3, self.PlayCustomMusic, "zdkj.chasedv2", loop=True)
+        super(MLZZZEntity, self).SecondUpdate()
 
-        if self.HasTag("can_attack"):
-            self.live_time += 1
-            if self.live_time >= 30:
-                RawEntity.Create(GameEntity.lightning_bolt, dim=self.dim, pos=self.foot_pos)
-                self.Destroy(0.1)
-        else:
-            self.live_time2 += 1
-            if self.live_time2 >= 120:
-                self.Destroy(0.1)
+
+class QXDKJEntity(ModEntityAlcatraz):
+    """潜行的恐惧"""
+
+    def __init__(self, entityId):
+        super(QXDKJEntity, self).__init__(entityId)
+        if modConfig.BeforeTime:
+            self.TriggerCustomEvent("event:before_time")
+
+    def OnDealDamage(self, args):
+        pass
+
+    def SecondUpdate(self):
+        super(QXDKJEntity, self).SecondUpdate()
+
+
+class WYQXZEntity(ModEntityAlcatraz):
+    """午夜潜行者"""
+
+    def __init__(self, entityId):
+        super(WYQXZEntity, self).__init__(entityId)
+        if modConfig.BeforeTime:
+            self.TriggerCustomEvent("event:before_time")
+
+    def OnDealDamage(self, args):
+        pass
+
+    def SecondUpdate(self):
+        super(WYQXZEntity, self).SecondUpdate()
+
+
+class JZGZZEntity(ModEntityAlcatraz):
+    """饥饿跟踪者"""
+
+    def __init__(self, entityId):
+        super(JZGZZEntity, self).__init__(entityId)
+        if modConfig.BeforeTime:
+            self.TriggerCustomEvent("event:before_time")
+
+    def OnDealDamage(self, args):
+        pass
+
+    def SecondUpdate(self):
+        super(JZGZZEntity, self).SecondUpdate()
 

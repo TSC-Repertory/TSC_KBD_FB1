@@ -1,0 +1,11 @@
+{
+    "format_version": "1.10",
+    "minecraft:item": {
+        "description": {
+            "identifier": "tsc_kbd:hunger_dagger"
+        },
+        "components": {
+            "minecraft:icon": "tsc_kbd:hunger_dagger"
+        }
+    }
+}
