@@ -15,7 +15,7 @@
         "base_color": "#AA0000",
         "overlay_color": "#AA0000"
       },
-      "identifier": "tsc:wyqkz",
+      "identifier": "tsc:wyqxz",
       "textures": {
         "default": "textures/entity/tsc_rosemary",
         "over": "textures/entity/tsc_rosemary_over"

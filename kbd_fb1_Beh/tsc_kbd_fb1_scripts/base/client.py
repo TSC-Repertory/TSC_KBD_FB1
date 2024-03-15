@@ -17,12 +17,14 @@ class BaseModuleClient(ModuleClientBase):
         super(BaseModuleClient, self).ConfigEvent()
         self.defaultEvent.update({
             ClientEvent.AddEntityClientEvent: self.AddEntityClientEvent,
+            ClientEvent.OnScriptTickClient: self._OnScriptTickClient,
         })
         self.serverEvent.update({
             "OnePlayEffect": self.OnePlayEffect,
             "Play_Mineraft_Particle": self.Play_Mineraft_Particle
 
         })
+        self.comp_factory.CreateModAttr(self.local_id).RegisterUpdateFunc("tsc_kbd_attr_san", self.FB1_SanChange)
 
     # 生物出生播放特效
     def AddEntityClientEvent(self, args):
@@ -60,4 +62,29 @@ class BaseModuleClient(ModuleClientBase):
             self.comp_factory.CreateParticleEntityBind(particleEntityId0).Bind(entityId, offset, (0, 1, 0))
 
         self.add_timer(delay, self.system.DestroyEntity, particleEntityId0)
+
+    def FB1_SanChange(self, args):
+        newValue = args.get("newValue", 0)
+        oldValue = args.get("oldValue", 0)
+        max_value = 160.0
+        rate = newValue / max_value
+        if rate <= 0.4 and self.local_id not in self.spawn_cd:
+            self.spawn_cd[self.local_id] = 30 * 60
+            self.NotifyToServer("San_By_SpawnMob", {"playerId": self.local_id})
+
+        if rate >= 0.7 and self.local_id in self.spawn_cd:
+            self.NotifyToServer("San_By_DelMob", {"playerId": self.local_id})
+
+    fb1_tick = 0
+    spawn_cd = {}
+    def _OnScriptTickClient(self):
+        self.fb1_tick += 1
+        if self.local_id in self.spawn_cd:
+            self.spawn_cd[self.local_id] -= 1
+            if self.spawn_cd[self.local_id] <= 0:
+                self.spawn_cd.pop(self.local_id)
+
+        if self.fb1_tick % 30 == 0:
+            pass
+
 

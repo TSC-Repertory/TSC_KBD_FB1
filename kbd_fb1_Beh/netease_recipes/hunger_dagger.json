@@ -2,22 +2,28 @@
     "format_version": "1.12",
     "minecraft:recipe_shaped": {
         "description": {
-            "identifier": "zdkj:wreath4"
+            "identifier": "zdkj:hunger_dagger"
         },
         "key": {
             "A": {
-                "item": "wither_rose"
+                "item": "tsc_kbd:hunger_tooth"
+            },
+            "B": {
+                "item": "cobblestone"
+            },
+            "C": {
+                "item": "stick"
             }
         },
         "pattern": [
-            "AAA",
-            "A A",
-            "AAA"
+            " A ",
+            " B ",
+            " C "
         ],
         "result": {
             "count": 1,
             "data": 0,
-            "item": "minecraft:apple"
+            "item": "tsc_kbd:hunger_dagger"
         },
         "tags": [
             "crafting_table"

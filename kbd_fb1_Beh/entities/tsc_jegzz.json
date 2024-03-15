@@ -145,7 +145,10 @@
             },
             "minecraft:mark_variant": {
                 "value": 0
-            }
+            },
+            "minecraft:loot": {
+                    "table": "loot_tables/jegzz.json"
+                }
         },
         "events": {
             "minecraft:entity_spawned": {

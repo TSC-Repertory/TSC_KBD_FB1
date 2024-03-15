@@ -155,9 +155,6 @@ class MLZZZEntity(ModEntityAlcatraz):
     def OnDealDamage(self, args):
         pass
 
-    def SecondUpdate(self):
-        super(MLZZZEntity, self).SecondUpdate()
-
 
 class QXDKJEntity(ModEntityAlcatraz):
     """潜行的恐惧"""
@@ -169,9 +166,6 @@ class QXDKJEntity(ModEntityAlcatraz):
 
     def OnDealDamage(self, args):
         pass
-
-    def SecondUpdate(self):
-        super(QXDKJEntity, self).SecondUpdate()
 
 
 class WYQXZEntity(ModEntityAlcatraz):

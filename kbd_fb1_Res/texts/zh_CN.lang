@@ -1,15 +1,15 @@
 
 entity.tsc:mlzzz.name=糜烂追踪者
-item.spawn_egg.entity.entity:mlzzz.name=生成糜烂追踪者
+item.spawn_egg.entity.tsc:mlzzz.name=生成糜烂追踪者
 
 entity.tsc:qxdkj.name=潜行的恐惧
-item.spawn_egg.entity.entity:qxdkj.name=生成潜行的恐惧
+item.spawn_egg.entity.tsc:qxdkj.name=生成潜行的恐惧
 
 entity.tsc:wyqxz.name=午夜潜行者
 item.spawn_egg.entity.entity:wyqxz.name=生成午夜潜行者
 
 entity.tsc:jegzz.name=饥饿跟踪者
-item.spawn_egg.entity.entity:jegzz.name=生成饥饿跟踪者
+item.spawn_egg.entity.tsc:jegzz.name=生成饥饿跟踪者
 
 item.tsc_kbd:hunger_dagger.name=饥饿匕首
 item.tsc_kbd:hunger_tooth.name=饥饿的牙

@@ -3,6 +3,9 @@
     "texture_data": {
       "tsc_kbd:hunger_tooth": {
         "textures": "textures/item/fog_man_item"
+      },
+      "tsc_kbd:hunger_dagger": {
+        "textures": "textures/item/fog_man_item"
       }
     },
     "texture_name": "atlas.items"
