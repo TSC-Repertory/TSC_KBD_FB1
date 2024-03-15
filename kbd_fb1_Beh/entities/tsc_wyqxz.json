@@ -1,0 +1,175 @@
+{
+    "format_version": "1.17.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "tsc:wyqxz",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "component_groups": {
+            "comp:can_attack": {
+                "minecraft:damage_sensor": {
+                    "triggers": [
+                        {
+                            "on_damage": {
+                                "filters": {
+                                    "any_of": [
+                                        {
+                                            "test": "is_family",
+                                            "subject": "other",
+                                            "value": "wraith"
+                                        },
+                                        {
+                                            "test": "is_family",
+                                            "subject": "other",
+                                            "value": "arthropoda"
+                                        },
+                                        {
+                                            "test": "is_family",
+                                            "subject": "other",
+                                            "value": "aquatic"
+                                        },
+                                        {
+                                            "test": "is_family",
+                                            "subject": "other",
+                                            "value": "mimic"
+                                        }
+                                    ]
+                                }
+                            },
+                            "deals_damage": false
+                        }
+                    ]
+                },
+                "minecraft:behavior.delayed_attack": {
+                    "priority": 1,
+                    "reach_multiplier": 1.1,
+                    "attack_duration": 0.1,
+                    "hit_delay_pct": 0.1,
+                    "track_target": true,
+                    "speed_multiplier": 1
+                }
+            },
+            "comp:entity": {
+                "minecraft:fire_immune": {},
+                "minecraft:knockback_resistance": {
+                    "value": 100
+                },
+                "minecraft:jump.static": {
+                },
+                "minecraft:movement.generic": {
+                },
+                "minecraft:movement": {
+                    "value": 0.40
+                },
+                "minecraft:navigation.generic": {
+                    "is_amphibious": true,
+                    "can_path_over_water": true,
+                    "can_breach": true,
+                    "can_swim": true,
+                    "can_break_doors": true
+                },
+                "minecraft:behavior.nearest_attackable_target": {
+                    "priority": 2,
+                    "reselect_targets": true,
+                    "entity_types": [
+                        {
+                            "filters": {
+                                "any_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "player"
+                                    }
+                                ]
+                            },
+                            "max_dist": 256,
+                            "must_see": true
+                        }
+                    ]
+                },
+                "minecraft:behavior.float": {
+                    "priority": 10
+                },
+                "minecraft:water_movement": {
+                    "drag_factor": 0.1
+                },
+                "minecraft:underwater_movement": {
+                    "value": 0.4
+                }
+            },
+            "comp:before_time": {
+                "minecraft:mark_variant": {
+                    "value": 1
+                }
+            }
+        },
+        "components": {
+            "minecraft:health": {
+                "value": 500,
+                "max": 500
+            },
+            "minecraft:variant": {
+                "value": 0
+            },
+            "minecraft:attack": {
+                "damage": 5
+            },
+            "minecraft:scale": {
+                "value": 1.0
+            },
+            "minecraft:follow_range": {
+                "value": 80,
+                "max": 80
+            },
+            "minecraft:physics": {
+            },
+            "minecraft:pushable": {
+                "is_pushable": true,
+                "is_pushable_by_piston": true
+            },
+            "minecraft:nameable": {
+                "allow_name_tag_renaming": true,
+                "always_show": true
+            },
+            "minecraft:type_family": {
+                "family": [
+                    "mob",
+                    "monster"
+                ]
+            },
+            "minecraft:collision_box": {
+                "width": 1,
+                "height": 2.5
+            },
+            "minecraft:mark_variant": {
+                "value": 0
+            }
+        },
+        "events": {
+            "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "comp:entity",
+                        "comp:reset_skill"
+                    ]
+                }
+            },
+            "event:before_time": {
+                "add": {
+                    "component_groups": [
+                        "comp:before_time"
+                    ]
+                }
+            },
+            "event:can_attack": {
+                "add": {
+                    "component_groups": [
+                        "comp:can_attack"
+                    ]
+                }
+            }
+        }
+    }
+}

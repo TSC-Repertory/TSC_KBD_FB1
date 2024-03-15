@@ -1,0 +1,9 @@
+{
+    "category":[
+        {
+            "name":"tsc_kbd", //分页名称，自定义物品的json中category的值
+            "labelText":"itemCategory.name.tsc_kbd", //分页描述，可在zh_CN.lang中设置中文名称
+            "icon": "textures/ui/tsc/common/page_icon" //分页图标路径
+        }
+    ]
+}

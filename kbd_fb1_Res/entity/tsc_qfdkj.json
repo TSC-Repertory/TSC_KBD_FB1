@@ -3,27 +3,27 @@
   "minecraft:client_entity": {
     "description": {
       "geometry": {
-        "default": "geometry.zdkj.fog_man"
+        "default": "geometry.tsc_rosemary.geo"
       },
       "materials": {
-        "default": "zombie"
+        "default": "entity_alphatest"
       },
       "render_controllers": [
         "controller.render.mob_over"
       ],
       "spawn_egg": {
-        "base_color": "#0000AA",
-        "overlay_color": "#0000AA"
+        "base_color": "#AA0000",
+        "overlay_color": "#AA0000"
       },
-      "identifier": "zdkj:fog_man",
+      "identifier": "tsc:qfdkj",
       "textures": {
-        "default": "textures/entity/zdkj_fog_man",
-        "over": "textures/entity/zdkj_fog_man_over"
+        "default": "textures/entity/tsc_rosemary",
+        "over": "textures/entity/tsc_rosemary_over"
       },
       "animations": {
         "controller": "controller.animation.preset.entity.no_attack",
-        "idle": "animation.fog_man.idle",
-        "move": "animation.fog_man.move"
+        "idle": "animation.tsc.rosemary.idle",
+        "move": "animation.tsc.rosemary.move"
       },
       "scripts": {
         "animate": [

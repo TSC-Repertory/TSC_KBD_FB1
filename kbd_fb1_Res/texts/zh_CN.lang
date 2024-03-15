@@ -1,7 +1,19 @@
 
-entity.zdkj:fog_man.name=雾中人
-item.spawn_egg.entity.zdkj:fog_man.name=生成雾中人
-item.tsc_kbd:fog_man_item.name=雾中人之泪
+entity.tsc:mlzzz.name=糜烂追踪者
+item.spawn_egg.entity.entity:mlzzz.name=生成糜烂追踪者
+
+entity.tsc:qfdkj.name=潜行的恐惧
+item.spawn_egg.entity.entity:qfdkj.name=生成潜行的恐惧
+
+entity.tsc:wyqxz.name=午夜潜行者
+item.spawn_egg.entity.entity:wyqxz.name=生成午夜潜行者
+
+entity.tsc:jegzz.name=饥饿跟踪者
+item.spawn_egg.entity.entity:jegzz.name=生成饥饿跟踪者
+
+item.tsc_kbd:hunger_dagger.name=饥饿匕首
+item.tsc_kbd:hunger_tooth.name=饥饿的牙
+
 
 
 
