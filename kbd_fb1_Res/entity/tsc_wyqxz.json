@@ -3,7 +3,7 @@
   "minecraft:client_entity": {
     "description": {
       "geometry": {
-        "default": "geometry.tsc_rosemary.geo"
+        "default": "geometry.tsc_wyqxz.geo"
       },
       "materials": {
         "default": "entity_alphatest"
@@ -17,13 +17,13 @@
       },
       "identifier": "tsc:wyqxz",
       "textures": {
-        "default": "textures/entity/tsc_rosemary",
-        "over": "textures/entity/tsc_rosemary_over"
+        "default": "textures/entity/tsc_wyqxz",
+        "over": "textures/entity/tsc_wyqxz_over"
       },
       "animations": {
         "controller": "controller.animation.preset.entity.no_attack",
-        "idle": "animation.tsc.rosemary.idle",
-        "move": "animation.tsc.rosemary.move"
+        "idle": "animation.tsc_wyqxz.idle",
+        "move": "animation.tsc_wyqxz.move"
       },
       "scripts": {
         "animate": [
